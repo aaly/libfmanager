@@ -3,11 +3,11 @@ cmake_minimum_required(VERSION 2.8)
 PROJECT(libfmanager)
 
 add_library(fmanager SHARED libfmanager.cpp)
-install (TARGETS fmanager DESTINATION usr/lib)
 add_library(fmanagerstatic STATIC libfmanager.cpp)
-install (TARGETS fmanagerstatic DESTINATION usr/lib)
 IF(NOT WIN32) # static or shared, windows uses the same extension not .a and .so :(
 	set_target_properties(fmanagerstatic PROPERTIES OUTPUT_NAME fmanager)
+	install (TARGETS fmanager DESTINATION usr/lib)
+	install (TARGETS fmanagerstatic DESTINATION usr/lib)
 ENDIF(NOT WIN32)
 
 ########## Docs ################
