@@ -1,0 +1,25 @@
+.TH "fmanager::getTopPath" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBstring fmanager::getTopPath(\fIconst string& path\fP)\fP
+gets top level node of a given path
+.SH "Parameters"
+.SS \fIconst string& path\fP
+full directory path
+.SH "Return value"
+returns a \fIstd::string\fP with top level path or the given string with appended path delimeter
+.SH "Example code"
+.nf
+.RS
+\fB
+fmanager* fm = new fmanager("fm");
+
+cout << fm\->getTopPath("c:\\\\program files\\\\mozilla\\\\") << endl;
+cout << fm\->getTopPath("/etc");
+
+OUTPUT:
+
+c:\\program files\\
+/etc/
+\fP
+.RE
+.fi

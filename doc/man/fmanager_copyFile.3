@@ -1,0 +1,13 @@
+.TH "fmanager::copyFile" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBint fmanager::copyFile(\fIconst string& ifname\fP, \fIconst string& ofname\fP, \fIconst bool& force\fP)\fP
+copies a file from source to destination
+.SH "Parameters"
+.SS \fIconst string& ifname\fP
+source file name, relative to \fIgetLDir()\fP or last \fIchangeDirectory()\fP call, or full path
+.SS \fIconst string& ofname\fP
+destination file name, relative to \fIgetLDir()\fP or last \fIchangeDirectory()\fP call, or full path
+.SS \fIconst bool& force\fP
+if set to true, will overwrite the destination, otherwise it will fail if set to false and desntination exist.
+.SH "Return value"
+returns 0 on success or 1 on failure

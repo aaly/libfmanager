@@ -1,0 +1,9 @@
+.TH "fmanager::checkType" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBfmanager::TYPE fmanager::checkType(\fIconst string& name\fP)\fP
+checks for the type of the given path ( file or directory)
+.SH "Parameters"
+.SS \fBconst string& name\fP
+name of the file or directory, full path or relative to \fIgetLDir()\fP or last \fIchangeDirectory()\fP if ever called
+.SH "Return value"
+returns \fIfmanager::TYPE\fP which is an enum with \fIFILE\fP and \fIDIRECTORY\fP

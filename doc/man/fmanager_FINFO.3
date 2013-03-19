@@ -1,0 +1,55 @@
+.TH "fmanager::FINFO" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fB\fImanager::FINFO\fP is a structure that holds file related data\fP
+.BR
+.SH "Structure"
+.RS
+.nf
+.BR
+.BR
+struct FINFO
+{
+	string	Name;	// name
+	int		Type;	// Dir or File
+	int		mType;	// type , regular , link ,block ....
+	int		Serial; // i\-node number (serial number)
+	int		Device;	
+	
+	int					GID; 	// group ID of owner
+	int					UID;	// user ID of owner
+	unsigned long		Size;	// size in bytes
+	
+	int		uPermissions; // Read, write, execute/search for user
+	int		gPermissions; // Read, write, execute/search for group
+	int		oPermissions; // Read, write, execute/search for others
+	
+	/*int		muPermissions; // Delete, change permission, and take ownership for owner
+	int		mgPermissions; // Delete, change permission, and take ownership for groups
+	int		moPermissions; // Delete, change permission, and take ownership for others*/
+	
+	
+	// permissions Read, write, execute/search
+	// 1 : read access
+	// 2 : write access
+	// 3 : read and write access
+	// 4 : execute access
+	// 5 : read and execute access
+	// 6 : write and execute access
+	// 7 : read,write and execute access
+	// permissions for delete, change permissions and take ownership
+	// 1 : Delete permission
+	// 2 : Change permission permission
+	// 3 : Take ownership permission
+	
+	int		nLinks;		// link counts to the file
+	int		rDev;		//device number for special files
+	TIME	aTime;		// time of last access
+	TIME	mTime;		// time of last modifications
+	TIME	cTime;		// time of last file status change
+	int		blockSize;	// best I/O block size
+	int		Blocks;		// number of disk blocks allocated
+};
+.fi
+.RE
+.SH "See also"
+fmanager::TIME(3)

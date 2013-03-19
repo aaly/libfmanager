@@ -1,0 +1,9 @@
+.TH "fmanager::changeDirectory" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBint fmanager::changeDirectory(\fIconst string& dirname\fP)\fP
+changes the current proccess directory which would affect later operations (relative paths would  change)
+.SH "Parameters"
+.SS \fIconst string& dirname\fP
+takes a \fIstd::string\fP with the directory path to change to
+.SH "Return value"
+returns 0 on success or 1 on failure

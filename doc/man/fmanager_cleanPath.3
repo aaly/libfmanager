@@ -1,0 +1,21 @@
+.TH "fmanager::cleanPath" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBstring fmanager::cleanPath(\fIconst string& path\fP)\fP
+if path is terminated with delimeter, it is removed
+.SH "Parameters"
+.SS \fBconst string& path\fR
+full directory path or relative to last \fIchangeDirectory()\fP if ever called or \fIgetLDir()\fP
+.SH "Return value"
+returns a \fIstd::string\fP with the given path after removing last character if it is a delimeter
+.SH "Example code"
+.LP
+.nf
+\fBfmanager* fm = new fmanager("fm");
+cout << fm->isFullPath("c:\\program files\\mozilla\\") << endl;
+cout << fm->isFullPath("/etc") << endl;
+cout << fm->isFullPath("/etc/");
+\fBOUTPUT:\fP
+c:\program files\mozilla
+/etc
+/etc\fP
+.fi

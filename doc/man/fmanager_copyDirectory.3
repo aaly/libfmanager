@@ -1,0 +1,13 @@
+.TH "fmanager::copyDirectory" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBint fmanager::copyDirectory(\fIconst string& gsrcdir\fP, \fIconst string& gdestdir\fP, \fIconst bool& overwrite\fP)\fP
+copies a directory \fIgsrcdir\fP to \fIgdestdir\fP and overwrites \fIgdestdir\fP if overwite is set to true
+.SH "Parameters"
+.SS \fIconst string& gsrcdir\fP
+source directory path relative to \fIgetLDir()\fP or last call to \fIchangeDirectory()\fP or full path
+.SS \fIconst string& gdestdir\fP
+destination directory path relative to \fIgetLDir()\fP or last call to \fIchangeDirectory()\fP or full path
+.SS \fIconst bool& overwrite\fP
+true or false, if true and \fIgdestdir\fP exists, it will be overwritten
+.SH "Return value"
+returns 0 on success or 1 on failure

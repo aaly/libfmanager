@@ -1,0 +1,17 @@
+.TH "fmanager::searchDirectory" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fB\fIvector<string>*\fP fmanager::searchDirectory(\fIconst string& dir\fP, \fIconst string& name\fP, \fIconst bool& recursive\fP, \fIconst bool& exact\fP, \fIconst bool& skipPermission = true\fP)\fP
+searches a directory for a given keyword and returns a vector of found entities
+.SH "Parameters"
+.SS \fIconst string& dir\fP
+directory path relative to \fIgetLDir()\fP or last call to \fIchangeDirectory()\fP or full path
+.SS \fIconst string& name\fP
+keyword to be searched for in file or directory names
+.SS \fIconst bool& recursive\fP
+if set to \fItrue\fP, the search will crawl inside nested directories
+.SS \fIconst bool& exact\fP
+the results have to match the given name
+.SS \fIconst bool& skipPermission = true\fP
+skip access permission errors , should be ignored
+.SH "Return value"
+returns a pointer to a heap allocaed \fIstd::vector<string>\fP if there is any results or \fINULL\fP on failure

@@ -1,0 +1,11 @@
+.TH "fmanager::createFile" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBint fmanager::createFile(\fIconst string& fname\fP, \fIconst bool& force\fP)\fP
+creates a file
+.SH "Parameters"
+.SS \fIconst string& fname\fP
+file path,  relative to \fIgetLDir()\fP or last \fIchangeDirectory()\fP call, or full path
+.SS \fIconst bool& force\fP
+overwrite the exisitng file with empty one (truncates), otherwise fails if set to false and the file exists
+.SH "Return values"
+0 on success or 1 on failure

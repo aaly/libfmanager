@@ -1,0 +1,23 @@
+.TH "fmanager::fileAttr" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBint fmanager::fileAttr(\fIconst string& filename\fP)\fP
+this function finds the attributes of a given path ( file or directory ).
+.SH "Parameters"
+.SS \fIconst string& filename\fP
+takes a \fIstd::string\fP with the path of the path to check for
+.SH "Return values"
+returns an \fIint\fP holding the proper attributes, where :
+
+.RS
+.nf
+\fB2\fR : read access , returns 2 and not one since 1 is reserved for error
+\fB3\fR : write access
+\fB4\fR : read and write access
+\fB5\fR : execute access
+\fB6\fR : read and execute access
+\fB8\fR : write and execute access
+\fB9\fR : read,write and execute access
+\fB1\fR : ERROR
+.fi
+.RE
+

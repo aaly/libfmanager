@@ -1,0 +1,29 @@
+.TH "fmanager::getFullPath" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBconst char* fmanager::getFullPath(\fIconst string& gpath\fP, \fIconst bool& dir\fP)\fP
+gets full path of a file or directory
+.SH "Parameters"
+.SS \fIconst string& gpath\fP
+filename or directory
+.SS \fIconst bool& dir\fP
+if true, a delimeter will be appended to the end of the returned value
+.SH "Return value"
+returns \fINULL\fP on error or a \fIconst char*\fP if successful
+.SH "Example code"
+
+.nf
+.RS
+\fB
+fmanager* fm = new fmanager("fm");
+cout << fm\->getFullPath("c:\\\\Program Files\\\\mozilla\\\\", true) << endl;
+cout << fm\->getFullPath("c:\\\\Program Files\\\\mozilla", true) << endl;
+cout << fm\->getFullPath("fm.cpp", false); // appends fm.cpp to the current working directory
+
+OUTPUT:
+
+c:\\program files\\mozilla\\
+c:\\program files\\mozilla\\
+/home/user/Projects/libfmanager/fm.cpp
+\fP
+.RE
+.fi

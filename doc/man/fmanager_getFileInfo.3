@@ -1,0 +1,17 @@
+.TH "fmanager::getFileInfo" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBFINFO* fmanager::getFileInfo(\fIconst string& fname\fP, \fIconst string& date\fP, \fIconst bool& stat\fP, \fIconst bool& resetstat\fP)\fP
+this function finds the related info of a path, info such as modified/access/creation time, user/group permissions and type ( block, regular ..)
+.SH "Parameters"
+.SS \fIconst string& fname\fP
+path of the file/directory, relative to \fIgetLDir()\fP or last \fIchangeDirectory()\fP call, or full path
+.SS \fIconst string& date\fP
+date type "gmt" or "local"
+.SS \fIconst bool& stat = true\fP
+should always be true
+.SS \fIconst bool& resetstat = true\fP
+should always be true
+.SH "Return value"
+returns a pointer to an heap allocated struct of type \fIfmanager::FINFO\fP
+.SH "See also"
+\fBfmanager::FINFO(3)\fP

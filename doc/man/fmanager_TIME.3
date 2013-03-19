@@ -1,0 +1,27 @@
+.TH "fmanager::TIME" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+\fIfmanager::TIME\fP is a structure that holds date related data
+.SH "Structure"
+
+.nf
+.RS
+\fB
+struct TIME
+{
+	int sec;
+	int min;
+	int hour;
+	int mday;
+	int mon;
+	int year;
+	int wday;
+	int yday;
+	int isdst;
+	string sDate;
+	TIME() : sec(0), min(0), hour(0), mday(0), mon(0), year(0), wday(0), yday(0), isdst(0){};
+};
+\fP
+.RE
+.fi
+.SH "See also"
+\fBfmanager::FINFO(3)\fP

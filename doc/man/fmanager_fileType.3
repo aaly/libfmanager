@@ -1,0 +1,9 @@
+.TH "fmanager::fileType" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBfmanager::FILETYPE fmanager::fileType(\fIconst string& filename\fP)\fP
+finds the type of the given path
+.SH "Parameters"
+.SS \fIconst string& filename\fP
+takes a \fIstd::string\fP with the path
+.SH "Return value"
+returns 1 on error or the following \fIfmanager::FILETYPE\fP enum : \fB{REG = 2, CHR, BLK, FIFO, LNK, SOCK}\fP

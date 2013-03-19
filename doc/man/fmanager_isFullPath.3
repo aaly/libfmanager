@@ -1,0 +1,27 @@
+.TH "fmanager::isFullPath" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBbool fmanager::isFullPath(\fIconst string& path\fP)\fP
+checks if a given path is full or not
+.SH "Parameters"
+.SS \fIconst string& path\fP
+a path
+.SH "Return value"
+returns \fItrue\fP if the given path is full or \fIfalse\fP if not
+.SH "Example code"
+.nf
+.RS
+\fB
+fmanager* fm = new fmanager("fm");
+
+cout << fm\->isFullPath("c:\\program files\\mozilla\\") << endl;
+cout << fm\->isFullPath("/etc") << endl;
+cout << fm\->isFullPath("etc/");
+
+OUTPUT:
+
+1
+1
+0
+\fP
+.RE
+.fi

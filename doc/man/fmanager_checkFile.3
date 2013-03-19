@@ -1,0 +1,11 @@
+.TH "fmanager::checkFile" 3 "16 August 2009" "AbdAllah Aly Saad" "pre-alpha 0.10"
+.SH "Description"
+.SS \fBint fmanager::checkFile(\fIconst string& filename\fP, \fIconst bool& reset = true\fP)\fP
+check if the given path is a file or not ( for instance a directory).
+.SH "Parameters"
+.SS \fBconst string& filename\fP
+a \fIstd::string\fP with the file name
+.SS \fBconst bool& reset = true\fP
+shouldn't be passed, default initialized to true.
+.SH "Return value"
+returns 0 on success or 1 on failure.
